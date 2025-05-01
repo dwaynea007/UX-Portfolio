@@ -1,19 +1,50 @@
 /* Base styling for the whole site */
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
-    background-color: #e6f2ff; /* Light blue background */
+    background-color: #f1f0f0; /* Outer background outside the card */
     color: #040303;
+    display: flex;
+    justify-content: center; /* Horizontally center everything */
   }
   
+  .portfolio {
+    max-width: 900px;
+    width: 100%;
+    margin: 2em auto;
+    padding: 2.5em;
+    background-color: #ffffff;
+    border-radius: 16px; /* more pronounced rounded edges */
+    border: 1px solid #dcdcdc; /* light, modern border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* depth */
+  }
+  
+  .hero,
+.projects,
+footer {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+
+  .portfolio-inner {
+    border: 1px solid #dcdcdc;       /* Light inner border */
+    border-radius: 10px;
+    padding: 2em;
+    background-color: #fafafa;       /* Slight contrast with outer white */
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03); /* subtle inner depth */
+  }
+
   /* Header styles with faded gray */
   header {
-    background-color: #f5f5f5; /* Faded gray */
+    background-color: #ece2d5; /* Faded gray */
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #ccc;
   }
   
@@ -21,18 +52,50 @@ body {
     margin: 0 1em;
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #9a8343
   }
   
   /* Hero section styles */
   .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 4em 2em;
-    background-color: #aec1d4; /* Slightly darker blue for contrast */
+    background-color: #d0baa3;
   }
+
+  .hero h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5em 0;
+  }
+
+  .hero h3 {
+    font-size:1.3rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1em;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 1.5em auto;
+    color: #444;
+  }
+  
   
   /* Projects section */
   .projects {
     padding: 2em;
+    background-color: d0baa3;
   }
   
   /* Project card design */
@@ -40,7 +103,7 @@ body {
     max-width: 600px;
     margin: 1em auto;
     padding: 1em;
-    background: #e9d9d9;
+    background: #eaddcf;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     text-align: center;
@@ -57,7 +120,7 @@ body {
   }
 
   #portfolio {
-    background-color: #ffffff;
+    background-color: #d0baa3;
   }
 
   .hero-img {
@@ -84,11 +147,73 @@ body {
   .prototype-gallery img {
     width: 200px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
   
   .prototype-gallery img:hover {
     transform: scale(1.05);
+  }
+  
+  /* Main container for the case study content */
+.case-study-container {
+    max-width: 850px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #d0baa3;
+    border: 1px solid #b28d8d; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Center all text and remove harsh alignment */
+  .project-content h2,
+  .project-content h4,
+  .project-content p,
+  .project-content ul {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  
+  /* Headings spaced nicely */
+  .project-content h2 {
+    margin-top: 2em;
+    font-size: 1.6em;
+  }
+  
+  .project-content h4 {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+  }
+  
+  /* Image gallery grid layout */
+  .prototype-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 0;
+  }
+  
+  .prototype-gallery img {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .prototype-gallery img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Optional: add slight fade-in animation */
+  .case-study-container {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   
