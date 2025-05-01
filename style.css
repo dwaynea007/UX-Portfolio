@@ -1,0 +1,94 @@
+/* Base styling for the whole site */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff; /* Light blue background */
+    color: #040303;
+  }
+  
+  /* Header styles with faded gray */
+  header {
+    background-color: #f5f5f5; /* Faded gray */
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    text-align: center;
+    padding: 4em 2em;
+    background-color: #aec1d4; /* Slightly darker blue for contrast */
+  }
+  
+  /* Projects section */
+  .projects {
+    padding: 2em;
+  }
+  
+  /* Project card design */
+  .project-card {
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 1em;
+    background: #e9d9d9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  
+  .project-card img {
+    max-width: 100%;      /* Prevents overflow */
+    width: 200px;         /* Controls image size */
+    height: auto;         /* Maintains aspect ratio */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+
+  #portfolio {
+    background-color: #ffffff;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50% / 40%;  /* Oval shape */
+    border: 3px solid #606367;  /* Blue border */
+    margin-bottom: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .prototype-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  .prototype-gallery img {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .prototype-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
